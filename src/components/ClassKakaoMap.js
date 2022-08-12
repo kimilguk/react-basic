@@ -1,5 +1,6 @@
 /*global kakao*/
 import React, {Component} from 'react';
+import { Link } from "react-router-dom";
 
 class KakaoMap extends Component {
     constructor (props) {
@@ -125,12 +126,15 @@ class KakaoMap extends Component {
         console.log ('render()안에서 this는 App.js콤포넌트 모듈 자신을 가리킨다.', this);
         //constructor (props) 부모클래스의 초기화한 값을 아래 태그의 속성(props)에 this값으로 전달한다.
         return (
-            <div style={{textalign:"center"}}>
+            <div>
+                <h2>클래스형 전기차 충전소 위치</h2>
+				<span>충전소 시검색</span>
                 <input type="text" id="keyword" onChange={this.onChange} value={this.state.keyword} />
                 <input type="button" onClick={this.onSearch} value="검색" />
                 <select id="pageNo" onChange={this.onPage} value={this.state.pageNo}>
                 	{this.repeatPage(this.state.totalCount)}
                 </select>
+                <Link to="/"><button id="btnHome">리액트 홈</button></Link>
                 <div id="map" style={{width:"100%",height:"350px"}}></div>
             </div>
         );

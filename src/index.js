@@ -4,7 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Routes, Route } from "react-router-dom";//npm install react-router-dom
-import KakaoMap from './components/KakaoMap';
+import ClassKakaoMap from './components/ClassKakaoMap';
+import FunctionKakaoMap from './components/FunctionKakaoMap';
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -12,7 +13,8 @@ ReactDOM.render(
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/kakaomap" element={<KakaoMap />} />
+          <Route path="/classkakaomap" element={<ClassKakaoMap />} />
+          <Route path="/functionkakaomap" element={<FunctionKakaoMap />} />
         </Routes>
     </BrowserRouter>,
     document.getElementById('root')
