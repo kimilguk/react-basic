@@ -2,32 +2,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import KakaoMap from './components/KakaoMap';
 
-/* React 클래스형 컴포넌트의 생명 주기란? 
-  생명 주기 또는 라이프사이클(Life cycle)이라고도 표현.
-  컴포넌트가 실행되거나 업데이트되거나 제거될 때, 특정한 이벤트들이 발생된다.
-  클래스 마운트(렌더링) 전: componentWillMount()
-  클래스 마운트(렌더링) 후: componentDidMount()
-  클래스 업데이트(리렌더링) 후: componentDidUpdate()
-  클래스 언마운트(컴포넌트 화면전환) 전: componentWillUnmount()
-*/
-/* React 함수형 컴포넌트의 생명 주기란?
-  클래스형 컴포넌트처럼 명시적인 함수를 사용하지 않고ㅡ useEffect() 함수를 사용해서 위 4가지 상태를 구현한다.
-  예를 들어 hidden이라는 state가 있다고 가정하면, hidden이 바뀌는 것에 따라서 라이프사이클을 정할 수 있다.
-  useEffect(() => {
-    console.log('hidden changed');
-  }, [hidden]);
-  위 코드는 컴포넌트가 첫 렌더링될 때 한 번 실행되고, 그 다음부터는 hidden이 바뀔 때마다 실행된다. 
-  즉, componentDidMount와 componentDidUpdate가 합쳐진 셈이다.
-  componentWillUnmount의 역할은 아래처럼 return으로 함수에 반환값을 추가하면 된다.
-  useEffect(() => {
-    console.log('hidden changed');
-    return () => {
-      console.log('hidden이 바뀔 예정입니다.');
-    };
-  }, [hidden]); 
-*/
 class App extends Component {//콤포넌트 생성자 : 콤포넌트 실행시 자동 실행(초기화)
   constructor (props) {
     //props(속성) 과 state(자료) 관계
@@ -175,9 +150,6 @@ class App extends Component {//콤포넌트 생성자 : 콤포넌트 실행시 �
             {this.repeatPage(this.state.totalCount)}
         </select>
         <div id="map" style={{width:"100%",height:"350px"}}></div>
-        <KakaoMap
-          keyword={this.state.keyword}
-        />
       </div>
     );
   }
