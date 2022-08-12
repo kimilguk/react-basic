@@ -135,7 +135,7 @@ class KakaoMap extends Component {
                 	{this.repeatPage(this.state.totalCount)}
                 </select>
                 <Link to="/"><button id="btnHome">리액트 홈</button></Link>
-                <div id="map" style={{width:"100%",height:"350px"}}></div>
+                <div id="map" style={{width:"100%",height:"550px"}}></div>
             </div>
         );
     }
