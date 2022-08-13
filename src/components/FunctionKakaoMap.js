@@ -126,17 +126,17 @@ function KakaoMap(props) {
 	}
 	useEffect(() => { //화면에 변화가 있는지 확인 후 실행할 때(=화면이 html객체모두 로딩 후) useEffect 함수를 사용한다.
 		getData();
-	  }, []);
+	  }, []);//keyword 를 입력하면 실시간으로 바뀐다.
 	return (
 		<div>
 			<h2>함수형 전기차 충전소 위치</h2>
 			<span>충전소 시검색</span>
-			<input class="form-control" type="text" onChange={onChange} value={keyword} />
-			<input class="form-control btn btn-primary" type="button" onClick={onSearch} value="검색" />
-            <span>페이지이동(아래 번호를 선택하면 화면이 전환된다.)</span><select class="form-select" onChange={onPage} value={pageNo}>
+			<input className="form-control" type="text" onChange={onChange} value={keyword} />
+			<input className="form-control btn btn-primary" type="button" onClick={onSearch} value="검색" />
+            <span>페이지이동(아래 번호를 선택하면 화면이 전환된다.)</span><select className="form-select" onChange={onPage} value={pageNo}>
                 {repeatPage(totalCount)}
             </select>
-			<Link to="/"><button class="form-control btn btn-primary" id="btnHome">홈으로</button></Link>
+			<Link to="/"><button className="form-control btn btn-primary" id="btnHome">홈으로</button></Link>
 			<div id="map" style={{width:"100%",height:"70vh"}}></div>
 		</div>
 	);
