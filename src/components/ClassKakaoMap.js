@@ -11,7 +11,7 @@ class KakaoMap extends Component {
           keyword: '천안시', //검색어 상태 입력예
           pageNo: 1,
           totalCount: 0,
-        } //json 1차원 데이터 객체 sub: 'Google 지도를 제대로 로드할 수 없습니다.',
+        } //json 1차원 데이터 객체
         this.onSearch = this.onSearch.bind(this);
         this.onChange = this.onChange.bind(this);
         this.getData = this.getData.bind(this);
