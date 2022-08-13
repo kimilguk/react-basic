@@ -128,14 +128,14 @@ class KakaoMap extends Component {
         return (
             <div>
                 <h2>클래스형 전기차 충전소 위치</h2>
-				<span>충전소 시검색</span>
-                <input type="text" id="keyword" onChange={this.onChange} value={this.state.keyword} />
-                <input type="button" onClick={this.onSearch} value="검색" />
-                <select id="pageNo" onChange={this.onPage} value={this.state.pageNo}>
+				<span>충전소 도시 검색(아래 검색할 시를 입력하고 검색 버튼을 누른다.)</span>
+                <input class="form-control" type="text" id="keyword" onChange={this.onChange} value={this.state.keyword} />
+                <input class="form-control btn btn-primary" type="button" onClick={this.onSearch} value="검색" />
+                <span>페이지이동(아래 번호를 선택하면 화면이 전환된다.)</span><select class="form-select" id="pageNo" onChange={this.onPage} value={this.state.pageNo}>
                 	{this.repeatPage(this.state.totalCount)}
                 </select>
-                <Link to="/"><button id="btnHome">리액트 홈</button></Link>
-                <div id="map" style={{width:"100%",height:"550px"}}></div>
+                <Link to="/"><button class="form-control btn btn-primary" id="btnHome">홈으로</button></Link>
+            	<div id="map" style={{width:"100%",height:"70vh"}}></div>
             </div>
         );
     }

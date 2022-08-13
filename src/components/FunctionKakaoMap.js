@@ -131,13 +131,13 @@ function KakaoMap(props) {
 		<div>
 			<h2>함수형 전기차 충전소 위치</h2>
 			<span>충전소 시검색</span>
-			<input type="text" onChange={onChange} value={keyword} />
-			<input type="button" onClick={onSearch} value="검색" />
-            <select onChange={onPage} value={pageNo}>
+			<input class="form-control" type="text" onChange={onChange} value={keyword} />
+			<input class="form-control btn btn-primary" type="button" onClick={onSearch} value="검색" />
+            <span>페이지이동(아래 번호를 선택하면 화면이 전환된다.)</span><select class="form-select" onChange={onPage} value={pageNo}>
                 {repeatPage(totalCount)}
             </select>
-			<Link to="/"><button id="btnHome">리액트 홈</button></Link>
-			<div id="map" style={{width:"100%",height:"550px"}}></div>
+			<Link to="/"><button class="form-control btn btn-primary" id="btnHome">홈으로</button></Link>
+			<div id="map" style={{width:"100%",height:"70vh"}}></div>
 		</div>
 	);
 }
