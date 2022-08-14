@@ -22,6 +22,7 @@ class App extends Component {//콤포넌트 생성자 : 콤포넌트 실행시 �
             Learn React
           </a>
           <Link to="/classkakaomap"><button id="btnHome">클래스형 카카오 맵</button></Link>
+    	  <Link to="/functionkakaomap"><button id="btnHome">함수형 카카오 맵</button></Link>
         </header>
       </div>
     );
