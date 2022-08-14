@@ -51,3 +51,9 @@ app.use('/openapi/getdata', function(req, res) {
         res.end(xmlToJson);
 	});
 });
+//빌드한 이후 노드js의 build폴더에서 리액트 css에 접근할 때 정적폴더로 지정해야 접근 가능하다.
+var path = require('path');
+ app.use(express.static(path.join(__dirname, 'build')));
+ app.get('*', function (req, res) { // / 루트 또는 /kakaomap 처럼 계속 추가 하기는 무리, 그래서 * 사용
+   res.sendFile(path.join(__dirname, '/build/index.html'));
+});
