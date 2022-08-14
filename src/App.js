@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Link } from "react-router-dom";
 
 class App extends Component {//콤포넌트 생성자 : 콤포넌트 실행시 자동 실행(초기화)
     
@@ -21,8 +20,6 @@ class App extends Component {//콤포넌트 생성자 : 콤포넌트 실행시 �
           >
             Learn React
           </a>
-          <Link to="/classkakaomap"><button id="btnHome">클래스형 카카오 맵</button></Link>
-          <Link to="/functionkakaomap"><button id="btnHome">함수형 카카오 맵</button></Link>
         </header>
       </div>
     );
